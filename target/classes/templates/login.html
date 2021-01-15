@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8/>
+	<title>Service History Management System</title>
+
+    <link rel="stylesheet"th:href="@{/css/loginRegister.css}"/>
+
+	
+</head>
+<body>
+	
+	<div class="topnav">
+		<a th:href="@{/registration}" class="primary-button">Регистрация</a>
+		<a th:href="@{/searchHistory}" class="primary-button"> Търсене по Вин</a>
+
+	</div>
+
+
+	<img class="logo" th:src="@{images/logo2.png}"/>
+
+	<div class = "container">		
+
+		<p></p>
+				
+		<h1> Вход </h1>
+		<form th:action="@{/login}" method="post">
+			
+			<!-- error message -->
+			<div th:if="${param.error}" class="form-group">
+				<div class="alert-danger">Грешно име или парола.</div>
+			</div>
+		
+			<!-- logout message -->
+			<div th:if="${param.logout}" class="form-group">
+				<div class="alert-info">Излязохте от профила си.</div>
+			</div>
+			
+			<div class = "form-group">
+				<label for ="username"> Рама </label> 
+				<input type="text" class = "form-control" id ="username" name = "username"
+				placeholder="Въведете номер на рамата (VIN)" autofocus="autofocus">
+			</div>
+			
+			<div class="form-group">
+				<label for="password">Парола</label> <input type="password"
+					id="password" name="password" class="form-control"
+					placeholder="Въведете парола" />
+			</div>
+			
+			<div class="form-group">
+						<input type="submit" name="login-submit" id="login-submit"
+							class="submit" value="Влезте в профила си" />
+				</div>
+
+				<P></P>
+
+			</div>
+
+
+</body>
+</html>

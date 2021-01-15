@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8/>
+	<title>Регистрация</title>
+    <link rel="stylesheet" th:href="@{/css/loginRegister.css}" />
+
+</head>
+<body>
+	
+	<div class="topnav">
+		<a th:href="@{/searchHistory}" class="primary-button"> Търсене по Вин </a>
+		<a th:href="@{/login}" class="primary-button">Вход</a>
+		
+
+	</div>
+
+
+<br>
+<br>
+	<!-- Create HTML registration form -->
+	<div class="container">
+		
+				
+
+				<h1>Регистрация</h1>
+
+				<!-- success message -->
+				<div th:if="${param.success}">
+					<div class="alert-info">Регистрацията премина успешно!</div>
+				</div>
+				<div th:if="${param.error}">
+					<div class="alert-danger">Потребителското име е заето!</div>
+				</div>
+				<br>
+
+				<form th:action="@{/registration}" method="post" th:object="${user}">
+
+					<div class="form-group">
+						<label class="control-label" for="vin"> VIN </label> <input
+							id="email" class="form-control" th:field="*{vin}" required
+							placeholder="Въведете ВИН номер" autofocus="autofocus" /> <br>
+						<span th:if="${#fields.hasErrors('vin')}" th:errors="*{vin}">error</span>
+
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="password"> Парола </label> <input
+							id="password" class="form-control" type="password"
+							placeholder="Въведете парола"	th:field="*{password}" required autofocus="autofocus" /> <br>
+						<span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">error</span>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="submit">Регистрация</button>
+					</div>
+				</form>
+		
+			
+		
+	</div>
+</body>
+</html>

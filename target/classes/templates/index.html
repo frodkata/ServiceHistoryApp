@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset=utf-8>
+
+<title>Service History Management System</title>
+
+	<link rel="stylesheet" th:href="@{/css/history.css}" />
+	
+</head>
+<body>
+
+	<div class="topnav">
+		<a th:href="@{/logout}" class="primary-button">Logout</a>
+		<a th:href = "@{/showNewHistoryForm}" class="primary-button"> Нов Запис </a>
+
+	</div>
+	
+	<div class="history-container">	
+		<h4 sec:authentication="principal.username">vin</h4>
+
+
+	
+		<table border="1" class = "history-table">
+			<thead>
+				<tr>
+					<th>
+							Услуга
+					</th>
+					<th>
+							Части
+					</th>
+					<th>
+							Пробег
+					</th>
+					<th>
+						Цена
+					</th>
+
+					<th>
+							Дата
+					</th>
+					<th> Действия </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="history : ${listHistory}">
+					<td th:text="${history.serviceName}"></td>
+					<td th:text="${history.partName}"></td>
+					<td th:text="${history.millage}"></td>
+					<td th:text="${history.price}"></td>
+					<td th:text="${history.date}"></td>
+					<td> 
+						
+							<a th:href="@{/showFormForUpdate/{id}(id=${history.id})}" class="edit-button" >
+								Промени
+							</a>
+							<a th:href="@{/deleteHistory/{id}(id=${history.id})}" class="delete-button">
+								Изтрий
+							</a>
+							
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	
+</div>
+</body>
+</html>

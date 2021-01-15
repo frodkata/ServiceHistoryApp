@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8/>
+	<title>Service History Management System</title>
+
+    <link rel="stylesheet" th:href="@{/css/loginRegister.css}" />
+
+	
+</head>
+<body>
+	
+	<div class="topnav">
+		<a th:href="@{/registration}" class="primary-button">Регистрация</a>
+		<a th:href="@{/login}" class="primary-button">Вход</a>
+
+	</div>
+
+	
+	
+	<br>
+	<div class = "container">		
+				
+				
+				<h2>Търсене по ВИН номер:</h2>
+				<form name="search" th:action="@{/search}" method="post" class="search">
+					<input type="text" name="vin" />
+					<button type="submit" class="submit">Търсене</button>
+				</form>
+				<p></p>
+
+			</div>
+
+
+</body>
+</html>

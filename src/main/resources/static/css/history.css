@@ -1,0 +1,228 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: #040404;
+   color: white;
+    font-family: 'Raleway',sans-serif; 
+    letter-spacing: 0.02em;
+     font-weight: 400;
+    -webkit-font-smoothing: antialiased; 
+  }
+
+ 
+  /* Index*/
+
+.history-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    overflow: hidden;
+    padding: 10px;
+    
+    background-color: rgba(19, 80, 91, 0.295);
+    background-size: cover;
+	background-clip: content-box;
+  position: relative;
+  margin: auto;
+  top: 30px; 
+  
+  color: #fbfbfb;
+    
+    width: 70%;
+
+}
+
+.history-container:after {
+  content: "";
+  display: flex;
+  position: absolute;
+  border: 50px solid transparent;
+  border-bottom: 50px solid #040404;
+  bottom: -60px;
+  right: -65px;
+  box-shadow: 0px 7px 6px -9px black;
+  transform: rotate(135deg);
+}
+
+.history-container:before {
+  content: "";
+  display: flex;
+  position: absolute;
+  border: 50px solid transparent;
+  border-top: 50px solid #040404;
+  top: -60px;
+  left: -65px;
+  box-shadow: 0px -7px 6px -9px black;
+  transform: rotate(135deg);
+}
+
+
+
+
+
+  /* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #13505B;
+    width: 99%;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .topnav span{
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+  /* History Table style */
+.history-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+}
+
+.history-table thead tr {
+    background-color: #040404;
+    color: #ffffff;
+    text-align: left;
+    border-top: 2px solid #040404 ;
+}
+
+.history-table th,
+.history-table td {
+    padding: 12px 15px;
+    border-left: 2px solid #040404;
+    border-right: 2px solid #040404;
+
+
+}
+
+.history-table tbody tr {
+    border-bottom: 1px solid #3369ff8e;
+}
+
+.history-table tbody tr:nth-of-type(even) {
+    background-color: #3369ff8e;
+}
+
+.history-table tbody tr:last-of-type {
+    border-bottom: 2px solid #040404;
+}
+
+.history-table tbody tr.active-row {
+    font-weight: bold;
+    color: #040404;
+}
+
+/*edit delete buttons*/
+.edit-button, .delete-button, .submit{
+    display:inline-block; 
+    padding:0.7em 1.4em; 
+    margin:0 0.3em 0.3em 0;
+     border-radius:0.15em; 
+     box-sizing: border-box; 
+     text-decoration:none; 
+     font-family:'Roboto',sans-serif;
+      text-transform:uppercase; 
+      font-weight:400; color:#FFFFFF; 
+      background-color:#3369ff;
+     box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17); 
+     text-align:center; position:relative;
+}
+
+.edit-button:hover , .submit:hover {
+    background-color:#3369ff8e;
+}
+
+.delete-button:hover {
+    background-color: rgb(117, 1, 1);
+}
+
+/* new history */
+
+form {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+input {
+  background: white;
+  color: rgb(7 2 18);
+  transition: all 200ms ease;
+  border-left: 0 solid transparent;
+  border: 0;
+  height: 2.8rem;
+  padding: 0 calc(3.8rem * 0.5);
+  border-radius: calc(5.8rem * 0.3);
+  box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+}
+
+.container {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border:  #ddd;
+  background-size: cover;
+	background-clip: content-box;
+  background-color: rgba(19, 80, 91, 0.295);
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  top: 30px; 
+  
+  color: #fbfbfb;
+}
+
+.container:after {
+  content: "";
+  display: flex;
+  position: absolute;
+  border: 50px solid transparent;
+  border-bottom: 50px solid #040404;
+  bottom: -60px;
+  right: -65px;
+  box-shadow: 0px 7px 6px -9px black;
+  transform: rotate(135deg);
+}
+
+.container:before {
+  content: "";
+  display: flex;
+  position: absolute;
+  border: 50px solid transparent;
+  border-top: 50px solid #040404;
+  top: -60px;
+  left: -65px;
+  box-shadow: 0px -7px 6px -9px black;
+  transform: rotate(135deg);
+}
