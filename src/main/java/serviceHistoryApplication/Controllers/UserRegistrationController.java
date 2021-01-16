@@ -44,7 +44,7 @@ public class UserRegistrationController {
 			return "redirect:/registration?error";
 		}else{
 			if(bindingResult.hasErrors() ){  //check if entity constraints are satisfied
-				return "/registration";
+				return "registration";
 			}else{
 				userService.save(userProfile);	//Save validated user to repository
 				return "redirect:/registration?success";
