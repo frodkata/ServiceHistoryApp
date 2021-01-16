@@ -14,5 +14,5 @@ Online vehicle service history application which provides users with simple CRUD
 <i>-Each user can create and login in their individual profile by registering their VIN-vehicle identification number <br>
 -Each user can search entries for given existing VIN number <br>
 -Once logged in their profile, each user can Create, Read, Update and Delete service history entries for their VIN number <br> </i>
--Forms are validated for adequate data input
+-Validated forms
 
