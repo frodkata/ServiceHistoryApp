@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 @Table(name="history", schema = "service_history")
 public class History {
     @Id
-    @GeneratedValue(strategy =  GenerationType.AUTO)
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "serviceName")
