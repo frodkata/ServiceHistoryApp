@@ -13,23 +13,23 @@ public class History {
     private long id;
 
     @Column(name = "serviceName")
-    @NotEmpty(message = "Полето 'Услуга' не може да бъде празно")
+    @NotEmpty(message = "Това поле не може да е празно")
     private String serviceName;
 
     @Column(name = "partName")
-    @NotEmpty(message = "Полето 'Части' не може да бъде празно")
+    @NotEmpty(message = "Това поле не може да е празно")
     private String partName;
 
     @Column(name = "millage")
-    @NotNull(message = "Полето 'Пробег' не може да бъде празно")
+    @NotEmpty(message = "Това поле не може да е празно")
     private Long millage;
 
     @Column(name = "price")
     private Double price;
 
     @Column(name="date")
-    @NotNull(message = "Полето 'Дата' не може да бъде празно")
-    @NotEmpty(message = "Полето 'Дата' не може да бъде празно")
+    @NotEmpty(message = "Това поле не може да е празно")
+    @NotEmpty(message = "Това поле не може да е празно")
     private String date;
 
     @Column(name="user_id")
