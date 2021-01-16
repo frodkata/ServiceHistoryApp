@@ -12,11 +12,11 @@ public class UserProfile {
 	private Long id;
 
 	@Column(name = "vin")
-	@Size(min = 4, max = 35, message = "VIN must be between 4 and 35 characters")
+	@Size(min = 4, max = 35, message = "VIN трябва да е между 4 и 35 символа")
 	private String vin;
 
 	@Column(name = "password")
-	@Size(min = 4, message = "Password must be over 4 characters")
+	@Size(min = 4, message = "Паролата трябва да е над 4 символа")
 	private String password;
 	
 
