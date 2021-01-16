@@ -21,14 +21,14 @@ public class History {
     private String partName;
 
     @Column(name = "millage")
-    @NotEmpty(message = "Това поле не може да е празно")
+    @NotNull(message = "Това поле не може да е празно")
     private Long millage;
 
     @Column(name = "price")
     private Double price;
 
     @Column(name="date")
-    @NotEmpty(message = "Това поле не може да е празно")
+    @NotNull(message = "Това поле не може да е празно")
     @NotEmpty(message = "Това поле не може да е празно")
     private String date;
 
