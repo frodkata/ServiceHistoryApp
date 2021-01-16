@@ -23,7 +23,12 @@ public class SearchHistoryController {
     public String searchHistory(Model model, @RequestParam String vin){
 
         //search repository for records by given VIN number
-        model.addAttribute("searchedHistory", searchHistoryService.searchHistory(vin));
+        if(searchHistoryService.searchHistory(vin) != null){ //if entry for VIN exists..
+            model.addAttribute("searchedHistory", searchHistoryService.searchHistory(vin));
+        }else{
+            return "redirect:/searchHistory?error";
+
+        }
 
 
 

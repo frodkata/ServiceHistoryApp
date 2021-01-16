@@ -36,8 +36,8 @@ public class SearchHistoryServiceImpl implements SearchHistoryService {
                 }
             }
         }else {
-            throw new RuntimeException(" History not found for vin:: " + vin);
-
+          //  throw new RuntimeException(" History not found for vin:: " + vin);
+                return null;
         }
 
 

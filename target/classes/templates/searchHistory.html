@@ -19,12 +19,17 @@
 	
 	
 	<br>
-	<div class = "container">		
-				
+	<div class = "container">
+
+		<br>
+
+		<div th:if="${param.error}">
+			<div class="alert-danger">Записи не съществуват!</div>
+		</div>
 				
 				<h2>Търсене по ВИН номер:</h2>
 				<form name="search" th:action="@{/search}" method="post" class="search">
-					<input type="text" name="vin" />
+					<input type="text" name="vin" autofocus="autofocus" />
 					<button type="submit" class="submit">Търсене</button>
 				</form>
 				<p></p>
