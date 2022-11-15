@@ -18,7 +18,7 @@ Application that lets users keep track of and manage their vehicle's service his
  <img src="https://i.postimg.cc/ZnPZmLrs/service1.png" alt="History-Table" border="0" >
  <img src="https://i.postimg.cc/9Mjn2HJV/service2.png" alt="New-History" border="0" >
 
-
+<h1>Project is no longer live due to heroku terminating it's free tier accounts!</h1>
 <h2>Hosted on Heroku: (https://heroku-service-history.herokuapp.com/) </h2>
 
 
